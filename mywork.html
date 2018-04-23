@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script>
+	function check()
+	{
+		var x=document.getElementById("dev").value;
+		var y=document.getElementById("demo").value;
+		if(x==""||isNaN(x)||y==""||isNaN(y))
+		{
+			alert("请输入数字");
+			document.getElementById("dev").value="";
+			document.getElementById("demo").value="";
+		}
+		else if(x!=123||y!=123)
+		{
+			alert("账号或密码错误")
+			document.getElementById("dev").value="";
+			document.getElementById("demo").value="";
+		}
+		else if (x==123&&y==123)
+		{
+			alert("登陆成功")
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<h1>请输入账号和密码</h1>
+		<b>提示：账号和密码皆为123</b>
+		<p>账号：</p>
+		<input type="text" id="dev">
+		<p>密码:</p>
+		<input type="password" id="demo">
+		<br><br>
+		<button type="button" onclick="check()">登陆</button>
+	</body>
+</html>
